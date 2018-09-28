@@ -1,4 +1,4 @@
-rom setuptools import setup, find_packages
+from setuptools import setup, find_packages
 
 #   NOTE: pip-tools is not compatible with pip >= 10.0.0
 #   While the issue above is being fixed, we commented out the following block and
