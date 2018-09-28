@@ -22,5 +22,5 @@ echo 'STEP 5: >>> Updating lambda λ code >>>'
 aws lambda update-function-code --function-name lambda --s3-bucket lambda --s3-key lambda.zip --publish
 
 # Remove Zip
-echo 'STEP 6: >>> Removing ares.zip >>>'
+echo 'STEP 6: >>> Removing lambda.zip >>>'
 rm lamba.zip
