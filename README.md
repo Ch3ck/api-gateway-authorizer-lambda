@@ -1,4 +1,4 @@
-# api-gateway-experiments
+# api-gateway-authorizer-lambda
 Secure your APIs with AWS Lambda authorizer functions
 
 
@@ -7,8 +7,8 @@ Experiments with AWS API Gateway containing scripts for verifying jwt tokens, λ
 
 ## Build
 ```
-λ git clone https://github.com/Ch3ck/api-gateway-experiments.git
-λ cd api-gateway-experiments
+λ git clone https://github.com/Ch3ck/api-gateway-authorizer-lambda.git
+λ cd api-gateway-authorizer-lambda
 λ pip3 install awscli --upgrade --user
 λ pip install -r requirements.txt
 λ pip install . #install current lambda function locally
