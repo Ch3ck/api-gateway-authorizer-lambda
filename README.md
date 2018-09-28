@@ -3,7 +3,9 @@ Secure your APIs with AWS Lambda authorizer functions
 
 
 ## Description
-Experiments with AWS API Gateway containing scripts for verifying jwt tokens, λ authorizer function and basic λ function to return an api response
+Experiments with AWS API Gateway containing scripts for verifying jwt tokens, λ authorizer function and basic λ function to return an api response. This project contains a boilerplate for setting up basic lambda authorizers and not implementing fully secure authorization for API Gateway.
+
+This code is complementary to [my medium post](https://medium.com/@checko)
 
 ## Build
 ```
@@ -30,3 +32,6 @@ The instructions for creating and/or updating the λ function on AWS is in the d
 
 ## Contributing
 If you encounter a bug problems, I'll like to hear about it. Also, pull requests are welcomed
+
+## Author
+- Ping me on Twitter [@nyah_check](https://twitter.com/nyah_check)
