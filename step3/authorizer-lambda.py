@@ -22,8 +22,9 @@ import logging
 import logging.handlers
 import urllib
 import ConfigParser
-from step2 import token_verifier_lambda
-handler = logging.handlers.WatchedFileHandler(os.environ.get("LOGFILE", "/var/log/test-lambda.log"))
+from token_verifier_lambda import token_verifier
+
+handler = logging.handlers.WatchedFileHandler(os.environ.get("LOGFILE", "./test-lambda.log"))
 formatter = logging.Formatter(logging.BASIC_FORMAT)
 handler.setFormatter(formatter)
 logger = logging.getLogger()
@@ -38,7 +39,7 @@ def lambda_handler(event, context):
     :param event:
     :param context: https://docs.aws.amazon.com/lambda/latest/dg/python-context-object.html
     """
-    logging.info("event: {}".format(event))
+    logger.info("event: {}".format(event))
     logger.info("context: {}".format(context))
     project_name = event.get('project_name')
     application = event.get('application')
@@ -52,7 +53,7 @@ def lambda_handler(event, context):
     response = urllib.urlopen(keys_url)
     keys = json.loads(response.read())['keys']
     token = event["authorizationToken"]
-    claims, res = token_verifier_lambda.token_verifier(keys, token)
+    claims, res = token_verifier(keys, token)
 
     # # Use this instead with google_auth keys
     # claims, res = token_verifier_lambda.google_token_verifier(token, event['app_client_id'])
